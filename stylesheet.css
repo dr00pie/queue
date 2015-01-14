@@ -1,9 +1,802 @@
 /*
-Queue Stylesheet
-Starting Date: 04/05/2014
-Lead Author: Tariq Muttalib
+Theme Name: Queue
+Theme URI: http://aspectswebdesign.com
+Author: Tariq Muttalib
+Author URI: http://www.aspectswebdesign.com/
+Description: Custom theme, able to hold a solid hold on all business functions and transactions. multiple sidebar options, a footer that holds dynamic plugins, and pages that allow widgets in page.
+Version: 1.0
+Tags: nothing yet
+License: GNU General Public License
+License URI: http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
+
+Queue WordPress Theme, Copyright 2014 Aspects Web Design
+Queue is distributed under the terms of the GNU GPL
 */
 
-.body{
-  
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
+html {
+ -webkit-text-size-adjust: none;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+ol, ul {
+	list-style: none;
+	margin: 0;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+embed, iframe, object {
+	max-width: 100%;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* =Global
+----------------------------------------------- */
+body, input, textarea {
+	color: #777;
+	font: 13px 'PT Sans', sans-serif;
+	line-height: 20px;
+	word-wrap: break-word;
+}
+body {
+	background-color: #564b4;
+	font-size: 12 px;
+	font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+	margin:35px 45px 20px 105px;
+	padding: 0px;
+	text-align: left;
+}
+
+/* =Header*/
+#header {
+	background-color: #90a090;
+	border-bottom: double 5px #8a324b;
+	border-left: solid 1px #9a9;
+	border-right: solid 1px #565;
+	border-top: solid 1px #9a9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font: normal 100% 'Times New Roman', Times, serif;
+	height: inherit;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px;
+}
+
+#headerimg  {
+	border-bottom: double 5px #8a324b;
+	border-left: solid 1px #9a9;
+	border-right: solid 1px #565;
+	border-top: solid 1px #9a9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px
+	margin: 7px 9px 0; 
+}
+
+.headimg {
+	background-color:#33CC33;
+	height: 150px;
+	width: 450px; 
+}
+
+/*Top Menu Formatting*/
+
+.top_menu {
+	background-color: #FFFF33;
+	float: right; 
+	height: 45px; 
+	margin: 5px 10px 5px 45px;
+	padding: 0; 
+	text-align: right; 
+	width: inherit;
+}
+
+#tabs-top {
+	float: right;
+	font-size: 93%;
+	line-height: normal;
+	width: inherit;
+}
+
+#tabs-top ul {
+          list-style:none;
+          margin:0;
+          padding:10px 10px 0 35px;
+}
+
+#tabs-top li {
+      display:inline;
+      margin:0;
+      padding:0;
+}
+
+#tabs-top a {
+      background:url("/images/tableft.gif") no-repeat left top;
+      float:left;
+      margin:0;
+      padding:0 0 0 6px;
+      text-decoration: underline;
+}
+
+#tabs-top a span {
+      background:url("/images/tabright.gif") no-repeat right top;
+      float:left;
+      display:block;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+}
+
+    /* Backslash Hack hides rule from IE5-Mac \*/
+    
+#tabs-top a span {
+	float:none;
+}
+    /* End IE5-Mac hack */
+    
+#tabs-top a:hover span {
+	color:#FFF;
+}
+
+#tabs-top a:hover {
+	background-position:0% -42px;
+}
+
+#tabs-top a:hover span {
+	background-position:100% -42px;
+}
+
+#tabs-top #current a {
+	background-position:0% -42px;
+}
+      
+#tabs-top #current a span {
+	background-position:100% -42px;
+}
+
+.search {
+	clear: both;
+	float: right;
+}
+
+.info_description {
+	color: #00275E; 
+	text-transform: lowercase; 
+	text-decoration: none;
+}
+
+/*After Header Container*/
+.bigboard {
+	background-color: #336699;
+	border: 20px 5px 10px 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px
+	display: block;
+	margin-top: 3px;
+	max-width: 1040px;
+	padding:5px;
+	position: relative;
+}
+
+.top_ad {
+	border: 2px #cc7788 solid; 
+	clear: both; 
+	height: inherit;
+	margin: 5px 15px 5px; 
+}
+
+#top_ad_format {
+	text-align: center;
+}
+
+#topad-position {
+	display: block;
+	margin: 10px 0 10px 0;
+}
+
+.maincontain {
+	width: 100%;
+	padding: 4px; 
+	text-align: left; 
+	margin: 0 0 10px 0; 
+	height: inherit; 
+	clear: both;
+	padding-top: 10px
+}
+
+.maincontain .main {
+	background: #CCCC00;
+	padding:5px;
+}
+
+.maincontain h2 {
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+
+#maincontain p {
+border-radius: 20px;
+margin: 0;
+padding: 0;
+padding-bottom:5px;
+}
+
+/*Main Menu Formatting*/
+
+
+.main_menu {
+	background-color: #FF8866;
+	float: left; 
+	height: 45px; 
+	margin: 5px 10px 5px 45px;
+	padding: 0; 
+	text-align: right; 
+	width: inherit;
+}
+
+#tabs-main {
+	float: left;
+	font-size: 93%;
+	line-height: normal;
+	width: inherit;
+}
+
+#tabs-main ul {
+          list-style:none;
+          margin:0;
+          padding:10px 10px 0 35px;
+}
+
+#tabs-main li {
+      display:inline;
+      margin:0;
+      padding:0;
+}
+
+#tabs-main a {
+      background:url("/images/tableft.gif") no-repeat left top;
+      float:left;
+      margin:0;
+      padding:0 0 0 6px;
+      text-decoration: underline;
+}
+
+#tabs-main a span {
+      background:url("/images/tabright.gif") no-repeat right top;
+      float:left;
+      display:block;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+}
+
+    /* Backslash Hack hides rule from IE5-Mac \*/
+    
+#tabs-main a span {
+	float:none;
+}
+    /* End IE5-Mac hack */
+    
+#tabs-main a:hover span {
+	color:#FFF;
+}
+
+#tabs-main a:hover {
+	background-position:0% -42px;
+}
+
+#tabs-main a:hover span {
+	background-position:100% -42px;
+}
+
+#tabs-main #current a {
+	background-position:0% -42px;
+}
+      
+#tabs-main #current a span {
+	background-position:100% -42px;
+}
+
+.entire-area {
+	max-width: 1040px;
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 5px #ddd;
+	-moz-box-shadow:  0 0 5px #ddd;
+	box-shadow: 0 0 5px #ddd;
+}
+
+.ExtraWidgets {
+	background-color: #999999;
+	border: 2px 0 0 0;
+	border-color: #CC3300;
+	display: block;
+	clear: both;
+}
+
+.WidgetControl {
+	width: auto;
+	background-color: #88cc33;
+	text-color: #333333;
+	margin: 0 5px 10px 5px;
+}
+
+#WidgetTable {
+	margin: 12px 0 5px 70px;
+}
+
+.wBoxed {
+	width: 280px;
+	background-color: #CCCC00;
+	text-color: #CCFF00;
+	padding: 4px;
+	margin-right: 2px;
+}
+
+#TableBox1 {
+	width: 300px;
+}
+
+#TableBox2 {
+	width: 300px;
+}
+
+#TableBox3 {
+	width: 300px;
+}
+
+.queuefeet {
+	background-color: #88ff66;
+	border: 2px 0 0 0;
+	border-color: #CC3300;
+	display: block;
+	clear: both;
+	position: relative;
+}
+
+.FooterControl {
+	width: auto;
+	background-color: #88cc33;
+	text-color: #333333;
+	margin: 0 5px 10px 5px;
+}
+
+#FooterTable {
+	margin: 0 0 20px 9px;
+	background-color: #cccc88;
+	padding: 2px;
+}
+
+#TableBox-f1 {
+	width: 336px;
+}
+
+#TableBox-f2 {
+	width: 336px;
+}
+
+#TableBox-f3 {
+	width: 336px;
+}
+
+.QueueFooter {
+	float: left;
+	background-color: #CCCC00;
+	text-color: #CCFF00;
+	padding: 4px;
+}
+
+/*Absolute bottom styling*/
+#baseline {
+	padding: 4px;
+	text-align: center;
+	margin: 0 0 10px 0;
+	height: inherit;
+	clear: both;
+	background-color: #ffffff;
+}
+
+.BaseCredits {
+	width: 300px;
+	clear: right;
+	float: left;
+	text-align: left;
+}
+
+.SIcons {
+	text-align: left;
+	margin-left: inherit;
+	width: 300px;
+	clear: right;
+	float: right;
+}
+
+/*Footer Menu Formatting*/
+
+.foot_menu {
+	background-color: #FFCC44;
+	float: left; 
+	height: 35px; 
+	margin: 5px 10px 5px 45px;
+	padding: 0; 
+	text-align: right; 
+	width: inherit;
+}
+
+#tabs-foot {
+	float: right;
+	font-size: 93%;
+	line-height: normal;
+	width: inherit;
+}
+
+#tabs-foot ul {
+          list-style:none;
+          margin:0;
+          padding:10px 10px 0 35px;
+}
+
+#tabs-foot li {
+      display:inline;
+      margin:0;
+      padding:0;
+}
+
+#tabs-foot a {
+      background:url("/images/tableft.gif") no-repeat left top;
+      float:left;
+      margin:0;
+      padding:0 0 0 6px;
+      text-decoration: underline;
+}
+
+#tabs-foot a span {
+      background:url("/images/tabright.gif") no-repeat right top;
+      float:left;
+      display:block;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+}
+
+    /* Backslash Hack hides rule from IE5-Mac \*/
+    
+#tabs-foot a span {
+	float:none;
+}
+    /* End IE5-Mac hack */
+    
+#tabs-foot a:hover span {
+	color:#FFF;
+}
+
+#tabs-foot a:hover {
+	background-position:0% -42px;
+}
+
+#tabs-foot a:hover span {
+	background-position:100% -42px;
+}
+
+#tabs-foot #current a {
+	background-position:0% -42px;
+}
+      
+#tabs-foot #current a span {
+	background-position:100% -42px;
+}
+
+/*=Navigational Menus and Elements*/
+/*
+**
+* Top Menu Formatting
+* This is the menu located in the header. 
+*/
+#header .topnav {background-color:#CCCCCC; valign:top; align: right; }
+
+#header .top-menu-area {
+	float: right;
+	margin: 5px 10px 5px 790px; 
+	line-height: 10px;
+	position: relative;
+}
+
+#header .top-menu-line {width:80%;}
+
+/*Top Navigation Link Style*/
+a:Link {color: #00275E; text-transform: lowercase; text-decoration: none;}
+a:Visited {color: #00275E; text-transform: lowercase; text-decoration: none;}
+a:Active {color: #FEB729; font-weight: bolder; text-decoration: none;}
+a:Hover {color: #6D98AB; text-decoration: underline;}
+
+/*
+**
+* Main Menu Formatting
+* This is the default menu for the theme. 
+*/
+
+#main_nav {margin-top:6px; width: 700px; height: 40px; align:center; background-color:#CCCCCC;}
+
+.main-menu-area {color: #880088; }
+
+/*Main Navigation Link Style*/
+a:Link {color: #00275E; text-transform: lowercase; font-weight: bold; text-decoration: none;}
+a:Visited {color: #00275E; text-transform: lowercase; font-weight: bold; text-decoration: none;}
+a:Active {color: #FEB729; font-weight: bolder; text-decoration: none;}
+a:Hover {color: #6D98AB; text-decoration: underline;}
+
+/*
+**
+* Footer Menu Formatting
+* This is the menu located in the extended footer. 
+*/
+
+#foot_nav {margin-top:6px; width: 700px; height: 40px; align:center; background-color:#CCCCCC;}
+
+.foot-menu-area {color: #880088; }
+
+/*Footer Navigation Link Style*/
+a:Link {color: #00275E; text-transform: lowercase; font-weight: bold; text-decoration: none;}
+a:Visited {color: #00275E; text-transform: lowercase; font-weight: bold; text-decoration: none;}
+a:Active {color: #FEB729; font-weight: bolder; text-decoration: none;}
+a:Hover {color: #6D98AB; text-decoration: underline;}
+
+/*=Sidebar Formatting
+-------------------------------*/
+
+/*Left Sidebar Formatting*/
+.sidebar_left {
+	border-right: 2px #cc7788 solid; 
+	width: 250px; 
+	clear: right; 
+	float: left; 
+	text-align: left;
+	margin: 0 8px 4px 2px;
+	padding: 0 2px 0 0;
+}
+
+
+.sidebar_left ul, ol, li {
+	margin: 2px 8px 4px 0;
+}
+
+/*Right Sidebar Formatting*/
+.sidebar_right {
+	border-left: 2px #cc7788 solid; 
+	width: 250px; 
+	clear: right; 
+	float: right; 
+	text-align: left;
+	margin: 0 2px 4px 8px;
+	padding: 0 0 0 2px;
+}
+
+.sidebar_right ul, ol, li {
+	margin: 2px 0 4px 8px;
+}
+
+/* =Headings*/
+H1 {font-family: Monotype Corsiva, Comic Sans, Courier; text-align= Left; font-size: 42pt; letter-spacing: 2px; font-weight:200; padding-bottom: 2px; margin-bottom: 1.5px;}
+
+H2 {font-family: Trebuchet Ms, Arial, Lucida Calligraphy; text-align= Center; font size: 28pt; color: #996699; letter-spacing: 2px; font-weight:365; margin-bottom: 2px; text-decoration: none;}
+
+H3 {font-family: Trebuchet Ms, Arial, Helvetica, sans-serif; text-align= Left; font size: 30pt; color: #708491; letter-spacing: 2px; font-weight: 300; margin-top: 1px; margin-bottom: 2px; padding-bottom: 0px; text-decoration: none;}
+
+H4 {font-family: Papyrus, Monotype Corsiva, Comic Sans, Courier; text-align=left; font-size: 24pt; font-weight: lighter; letter-spacing: 2px; font-color: #F5DEB3; cursor: crosshair; text-align: center; margin-top: -10px; margin-bottom: 3px;}
+
+
+a:link.negro {color: #121212;}
+a:visited.negro {color: #121212;}
+a:active.negro {color: #121212;}
+a:hover.negro {color: #000000; text-decoration: none;}
+
+a:Link.footer {color: #dae1e8; text-transform: lowercase; font-weight: bold; text-decoration: none;}
+a:Visited.footer {color: #dae1e8; text-transform: lowercase; font-weight: bold; text-decoration: none;}
+a:Active.footer {color: #FEB729; font-weight: bolder; text-decoration: none;}
+a:Hover.footer {color: #6D98AB; text-decoration: underline;}
+
+/* No Border/Margin/Padding */
+.no-margin-top {
+	margin-top:0px !important;
+}
+.no-margin-bottom {
+	margin-bottom:0px !important;
+}
+.no-margin-left {
+	margin-left:0px !important;
+}
+.no-margin-right {
+	margin-right:0px !important;
+}
+.no-padding-top {
+	padding-top:0px !important;
+}
+.no-padding-bottom {
+	padding-bottom:0px !important;
+}
+.no-padding-left {
+	padding-left:0px !important;
+}
+.no-padding-right {
+	padding-right:0px !important;
+}
+.no-border-top {
+	border-top:0 none !important;
+}
+.no-border-bottom {
+	border-bottom:0 none !important;
+}
+.no-border-left {
+	border-left:0 none !important;
+}
+.no-border-right {
+	border-right:0 none !important;
+}
+
+.Blend {
+  border: none;
+  text-decoration: none;
+}
+
+.hidden {
+display: none;
+}
+
+@font-face {
+font-family: StoreGraf1;
+src: url('../includes/TAGSXTREME.TTF'); /* IE */
+}
+
+.Storesign01 {
+ font-family: StoreGraf1;
+ font-size:34pt;
+}
+
+@font-face
+{
+font-family: TitleGraf1;
+src: url('../includes/baveuse.ttf'); /* IE */
+}
+
+.progressSign01 {
+ font-family: TitleGraf1;
+ font-size:22pt;
+}
+
+ .fletter {font-size: 200%; font-weight: 900; line-height: 13pt; font-family: "Tempus Sans ITC", Garamond, Times; float: left;}
+
+ .flettertitle {font-size: 200%; font-weight: 900; line-height: 18pt; font-family: Monotype Corsiva, Garamond, Comic Sans; letter-spacing: 2px; text-align=left;}
+
+.errortxt {
+color: #CC0033;
+font-weight: bold;
+font-size: 110%;
+font-family: Trebuchet Ms, Arial, Helvetica, sans-serif; 
+}
+
+.highlighttxt {
+background-color: #FFCC99; 
+font-weight: bold;
+}
+
+ .title {font-family: Monotype Corsiva, Comic Sans, Courier; text-align=center; font-size: 14pt; letter-spacing: 2px;}
+
+ .status {color:#8b4513; font-family: Garamond, Comic Sans, Courier; font-size: 8pt; font-weight: 650; letter-spacing: 2px;}
+
+ .descrp {color:black; margin-left: 2px; font-family: Comic Sans, Garamond, Courier; font-size: 10pt; letter-spacing: 2px;}
+
+ .space {margin-left: 1px; margin-right: 1px; padding-bottom: 1px; padding-top: 1px; padding-right: 1px; border-left-width: thin; border-right-width: thin; border-bottom-width: medium; border-top-width: thin; border-style: outset; font-size: 11pt;}
